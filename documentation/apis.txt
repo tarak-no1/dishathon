@@ -1,0 +1,264 @@
+seller login
+--------------------------------------
+post : dishathon/seller/authenticate
+request :
+{
+    name : "",
+    password : ""
+}
+response :
+{
+    success : true,
+    message : "login successful",
+    user_details : {
+        "name" : "",
+        "user_id" : ""
+    ]
+}
+=======================================
+inventory upload
+---------------------------------------
+post : dishathon/seller/upload-inventory
+request :
+{
+    user_details : {
+        "name" : "",
+        "user_id" : ""
+    },
+    inventory : file
+}
+response :
+{
+    success : true,
+    message : ''
+}
+========================================
+product list
+----------------------------------------
+post : dishathon/seller/get-product-list
+========================================
+request :
+{
+    user_details : {
+        "name" : "",
+        "user_id" : ""
+    }
+}
+response :
+{
+    data : [
+        {
+            item_id : '',
+            product_link : '',
+            price : "",
+            max_cpc : '',
+            clicks : '',
+            impressions : ''
+        }
+    ]
+}
+=======================================
+updating cpc
+---------------------------------------
+post : /dishathon/seller/update-product-cpc-value
+request :
+{
+    token : '',
+    product_id : '',
+    cpc_value : ''
+}
+response :
+{
+    success : true,
+    message : 'Successfully Updated'
+}
+*****************************************************************************************************
+dish admin login
+---------------------------------------
+post : dishathon/dish-admin/authenticate
+request :
+{
+    name : "",
+    password : ""
+}
+response :
+{
+    success : false,
+    message : 'invalid login details',
+    token : ""
+}
+=======================================
+uploading video
+---------------------------------------
+post : dishathon/dish-admin/upload-video
+request :
+{
+    video_name : "",
+    video : file,
+    token : token
+}
+response :
+{
+    success : true,
+    message : ''
+}
+========================================
+product bidding
+-----------------------------------------
+post : dishathon/dish-admin/get-product-bidding
+request :
+{
+    token : token
+}
+response :
+{
+    data : [
+        {
+            company_name : "",
+            item_id : '',
+            page_link : '',
+            price : '',
+            front_link : '',
+            max_cpc : '',
+            total_clicks : '',
+            total_impressions : '',
+            click_by_impression_ration : ''
+        }
+    ]
+}
+===========================================
+get campaigns
+-----------------------------------------
+post : dishathon/dish-admin/get-campaigns
+request :
+{
+    token : token
+}
+response :
+{
+    data : [
+        {
+            from_date : '',
+            to_date : '',
+            company_name : '',
+            campaign_name : '',
+            clicks : '',
+            impressions : '',
+            click_by_impression_ratio : '',
+            value_score : ''
+        }
+    ]
+}
+**************************************************************************
+Users
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+adding new user
+-------------------------------------
+post : /dishathon/user/add-user
+request :
+{
+    device_id : ''
+}
+response :
+{
+    success : true,
+    message : '',
+    token : token
+}
+======================================
+get boxes
+--------------------------------------
+post : /dishathon/user/get-object-boxes
+request :
+{
+    video_name : '',
+    paused_position_time : '',
+    token : token
+}
+response :
+{
+    success : true,
+    message : "",
+    data : [
+        {
+            object_id : '',
+            box_coordinates : []
+        },
+        {
+            object_id : '',
+            box_coordinates : []
+        }
+    ]
+}
+
+======================================
+getting inventory
+--------------------------------------
+post : /dishathon/user/get-inventory
+request :
+{
+    object_id : '',
+    user_details : {
+        "device_id" : ""
+    }
+}
+response :
+{
+    success : true,
+    title : '',
+    data : [
+       {
+            _id : '',
+            product_link : '',
+            item_id : '',
+            image_link_default : '',
+            price : '',
+            colour : '',
+            pattern : '',
+            pattern_type : '',
+            sleeve : '',
+            sleeve_type : ''
+       }
+    ],
+    similar_images : ['image_url1', 'image_url2']
+}
+======================================
+storing favorite products
+--------------------------------------
+post : /dishathon/user/save-favorites
+request :
+{
+    product_id : '',
+    token : token
+}
+response :
+{
+    success : true,
+    message : ''
+}
+=======================================
+get favorites
+---------------------------------------
+post : /dishathon/user/get-favorites
+request :
+{
+    token : token
+}
+response :
+{
+    data : [
+        {
+            _id : '',
+            product_link : '',
+            item_id : '',
+            image_link_default : '',
+            price : '',
+            colour : '',
+            pattern : '',
+            pattern_type : '',
+            sleeve : '',
+            sleeve_type : ''
+        }
+    ]
+}
+============================================

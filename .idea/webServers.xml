@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="eebdaf04-a1c0-49ac-bb9b-6aaff1e7dfdf" name="dishathon" url="http://www.prodx.in">
+        <fileTransfer host="www.prodx.in" port="22" privateKey="D:\All Files\tarakesh.pem" rootFolder="/home/ubuntu/dishathon_backend/" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

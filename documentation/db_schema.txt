@@ -1,0 +1,85 @@
+Sellers Data Structure
+collection name : sellers
+{
+    name : '',
+    password : ''
+}
+===============================================
+Dist Admin Data Structure
+collection name : dish_admins
+{
+    name : '',
+    password : ''
+}
+===============================================
+Admin Data Structure
+collection name : admin
+{
+    name : '',
+    password : ''
+}
+===============================================
+Video Data Structure
+collection name : video_details
+{
+    name : '',
+    thumbnail_path : '',
+    video_path : '',
+    width : 123,
+    height : 23
+}
+===============================================
+Video Objects Structure
+collection name : video_objects
+{
+  "video_name" : "test",
+  "start_time" : 1,
+  "end_time" : 1000,
+  "attributes" : {
+    "colour" : "black", 
+    "sleeve" : "short sleeves",
+    "pattern" : "printed",
+    "pattern_type" : "floral"
+  },
+  boxes : {
+    1 : [0.43, 0.2, 0.63,0.8],
+    3 : [0.43, 0.2, 0.63,0.8],
+    6 : [0.43, 0.2, 0.63,0.8],
+    34 : [0.43, 0.2, 0.63,0.8],
+    734 : [0.43, 0.2, 0.63,0.8]
+    }
+}
+===============================================
+Inventory structure
+collection name : fashion_inventory
+{
+  "category" : "",
+  "image_links" : {
+    "default" : "",
+    "front" : "",
+    "back" : "",
+    "left" : "",
+    "right" : ""
+  },
+  "product_link" : ""
+  "colour" : "",
+  "price" : "",
+  "pattern" : "",
+  "pattern_type" : "",
+  "sleeve" : "",
+  "sleeve_type" : "",
+  "company_name" : "",
+  "max_cpc" : "",
+  "clicks" : "",
+  "impressions" : ""
+}
+===============================================
+
+product list table
+sno, pagelink, itemid, price, maxcpc, impressions, clicks
+
+product bidding
+sno, itemid, pageln, price, frontlink, max_cpc, clicks, impressions, click by impre ratio
+
+campaigns
+sno, from date, to date, company name, campaign name, campaign budget, clicks, impression, click by impre ration, value score
